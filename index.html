@@ -7,18 +7,44 @@
     <title>Vremea</title>
   </head>
   <body>
-    <form id="searchForm">
-      <label for="search">Search:</label>
-      <input
-        id="searchInput"
-        type="text"
-        id="search"
-        name="search"
-        placeholder="Enter your search term"
-      />
-      <button type="submit">Search</button>
-    </form>
-    <img id="textText" />
+    <header>
+      <ul id="conditions">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </header>
+    <main>
+      <p id="currentWeather"></p>
+      <p id="location"></p>
+      <p id="dateTime"></p>
+      <p id="temp"></p>
+      <button id="degreesType"></button>
+      <img id="weatherIcon" />
+      <form id="searchForm">
+        <label for="search">Search:</label>
+        <input
+          id="searchInput"
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Enter your search term"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </main>
+    <footer>
+      <ul id="forecast">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
