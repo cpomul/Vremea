@@ -7,21 +7,23 @@
     <title>Vremea</title>
   </head>
   <body>
-    <header>
-      <ul id="conditions">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </header>
+    <header></header>
     <main>
-      <p id="currentWeather"></p>
-      <p id="location"></p>
-      <p id="dateTime"></p>
-      <p id="temp"></p>
-      <button id="degreesType"></button>
-      <img id="weatherIcon" />
+      <div id="container">
+        <div id="generalweatherInfo">
+          <p id="currentWeather">current weather</p>
+          <p id="locationData">location</p>
+          <p id="dateTimeP">time</p>
+          <p id="temp">x degrees</p>
+          <img id="weatherIcon" />
+        </div>
+        <ul id="conditions">
+          <li id="feelsLikeC">Feels like</li>
+          <li id="humidity">Humidity</li>
+          <li id="chanceOfRain">Chance of Rain</li>
+          <li id="windSpeed">Wind Speed</li>
+        </ul>
+      </div>
       <form id="searchForm">
         <label for="search">Search:</label>
         <input
@@ -36,15 +38,15 @@
     </main>
     <footer>
       <ul id="forecast">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>luni</li>
+        <li>marti</li>
+        <li>miercuri</li>
+        <li>joi</li>
+        <li>vineri</li>
+        <li>sambata</li>
+        <li>duminica</li>
       </ul>
     </footer>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
