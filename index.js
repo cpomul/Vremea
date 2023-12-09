@@ -17,7 +17,7 @@ async function callWeather() {
     const searchItem = searchInput.value;
 
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=a7264ea0b4b64a9e9fb125807230512&q=${searchItem}&days=1&aqi=no&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=a7264ea0b4b64a9e9fb125807230512&q=${searchItem}&days=1&aqi=yes&alerts=no`
     );
     response.json().then(function (response) {
       console.log(response);
@@ -28,8 +28,8 @@ async function callWeather() {
 
       feelsLikeC.textContent = `Feels Like ${response.current.feelslike_c}°C`;
       humidity.textContent = `Humidity ${response.current.humidity}%`;
-      //chanceOfRain.textContent = `Chance fo Rain ${response.forecast.forecastday.day.daily_chance_of_rain}%`;
-      windSpeed.textContent = `Wind Speed ${response.current.wind_kph}kph`;
+      chanceOfRain.textContent = `Chance fo Rain ${response.forecast.forecastday[0].day.daily_chance_of_rain}%`;
+      windSpeed.textContent = `Wind Speed ${response.current.wind_kph}Kph`;
     });
   });
 }
