@@ -4,11 +4,8 @@ export default class DateTimeDisplay {
   }
 
   displayDateTime() {
-    const currentDateString = `${this.currentDate.getFullYear()}-${
-      this.currentDate.getMonth() + 1
-    }-${this.currentDate.getDate()}`;
     const currentTimeString = `${this.currentDate.getHours()}:${this.currentDate.getMinutes()}:${this.currentDate.getSeconds()}`;
-    return `${currentDateString} | ${currentTimeString}`;
+    return `${currentTimeString}`;
   }
   updateTimeContinuously() {
     setInterval(() => {
