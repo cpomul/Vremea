@@ -1,20 +1,88 @@
-main > #container {
-  display: flex;
-  justify-content: center;
-  margin-top: 25vh;
-  gap: 50px;
-  border: 1px solid black;
-  border-bottom: none;
-}
-#searchForm {
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  border-top: none;
-}
-#conditions {
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+header {
+}
+
+main {
+  text-align: center;
+}
+
+#container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#generalweatherInfo {
+  margin-bottom: 20px;
+}
+
+#currentWeather {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#locationData,
+#dateTimeP,
+#temp {
+  margin: 5px 0;
+}
+
+#weatherIcon {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+#conditions {
   list-style: none;
-  gap: 20px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#conditions li {
+  flex: 1;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+#conditions li:last-child {
+  border-right: none;
+}
+
+#searchForm {
+  margin-top: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
