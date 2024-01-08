@@ -36,7 +36,8 @@ async function callWeather(latitude, longitude) {
     response.json().then(function (response) {
       console.log(response);
       currentWeather.textContent = response.current.condition.text;
-      locationData.textContent = response.location.country;
+      locationData.textContent =
+        response.location.country + ", " + response.location.name;
       dateTimeDisplay.updateTimeContinuously();
       temp.textContent = response.current.temp_c + "°C";
       feelsLikeC.textContent = `Feels Like ${response.current.feelslike_c}°C`;
@@ -51,7 +52,8 @@ async function callWeather(latitude, longitude) {
     response.json().then(function (response) {
       console.log(response);
       currentWeather.textContent = response.current.condition.text;
-      locationData.textContent = response.location.country;
+      locationData.textContent =
+        response.location.country + ", " + response.location.name;
       dateTimeDisplay.updateTimeContinuously();
       temp.textContent = response.current.temp_c + "°C";
       feelsLikeC.textContent = `Feels Like ${response.current.feelslike_c}°C`;
